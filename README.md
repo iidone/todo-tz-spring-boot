@@ -19,11 +19,12 @@ sudo apt update && sudo apt install -y openjdk-17-jdk
 
 # MacOS:
 brew install openjdk@17
-2. Настройка базы данных PostgreSQL
-Установите PostgreSQL (если не установлен):
 ```
 
-### 2. Создайте базу данных и замените подходящие данные в файле
+### 2. Настройка базы данных PostgreSQL
+Установите PostgreSQL (если не установлен).
+
+Создайте базу данных и замените подходящие данные в файле
 src/main/resources/application.properties:
 
 spring.datasource.url=jdbc:postgresql://localhost:5432/your_db_name
