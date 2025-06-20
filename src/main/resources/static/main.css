@@ -1,0 +1,201 @@
+:root {
+    --primary-color: #4285f4;
+    --success-color: #34a853;
+    --warning-color: #fbbc05;
+    --danger-color: #ea4335;
+    --light-bg: #f8f9fa;
+    --dark-text: #202124;
+    --light-text: #5f6368;
+    --error-color: #d93025;
+    --new-task-color: #fff3e6; 
+    --completed-color: #e6ffe6;
+    --overdue-color: #ffe6e6;  
+    --border-color: #ddd;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 500;
+    user-select: none;
+}
+
+p {
+    user-select: none;
+}
+
+.task {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--border-color);
+}
+
+.task:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+.task.completed {
+    background-color: #e6ffe6 !important;
+    border-left: 4px solid #4CAF50 !important;
+}
+
+.task.pending {
+    background-color: #fff3e6 !important;
+    border-left: 4px solid #FF9800 !important;
+}
+
+.task.overdue {
+    border-left: 5px solid #ea4335 !important;
+    background-color: rgba(234, 67, 53, 0.08) !important;
+}
+
+.task-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.task-id {
+    font-size: 0.8em;
+    color: var(--light-text);
+    background: #f1f1f1;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.task h3 {
+    margin: 0;
+    color: var(--dark-text);
+    font-size: 1.2em;
+    flex-grow: 1;
+}
+
+.task-description {
+    margin: 10px 0;
+    color: var(--light-text);
+    line-height: 1.5;
+}
+
+.task-details {
+    margin: 15px 0;
+    font-size: 0.95em;
+}
+
+.task-details p {
+    margin: 5px 0;
+}
+
+.deadline-days {
+    font-weight: 500;
+    margin: 5px 0 10px !important;
+}
+
+.completed .deadline-days {
+    color: var(--success-color);
+}
+
+.overdue .deadline-days {
+    color: var(--danger-color);
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    user-select: none;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+}
+
+.toggle-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.delete-btn {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+form {
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.8em;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.invalid {
+    border-color: var(--error-color) !important;
+}
+
+.invalid:focus {
+    box-shadow: 0 0 0 2px rgba(217, 48, 37, 0.2) !important;
+}
+

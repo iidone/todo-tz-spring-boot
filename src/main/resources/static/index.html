@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>ToDo</h1>
+        
+        <form id="task-form">
+            <input type="text" id="title" placeholder="Название задачи" required>
+            <textarea id="description" placeholder="Описание задачи" rows="3"></textarea>
+            <input type="date" id="deadline" required>
+            <button type="submit">Добавить задачу</button>
+        </form>
+        
+        <div id="task-list"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
