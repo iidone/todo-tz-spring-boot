@@ -28,7 +28,9 @@ brew install openjdk@17
 src/main/resources/application.properties:
 
 spring.datasource.url=jdbc:postgresql://localhost:5432/your_db_name
+
 spring.datasource.username=your_username
+
 spring.datasource.password=your_password
 
 ### 3. Запуск проекта
